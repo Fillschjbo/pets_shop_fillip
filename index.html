@@ -1,16 +1,30 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+</head>
+<body>
+  <header class="w-screen h-[80px] bg-[#3A506B] flex justify-between items-center px-[5vw]">
+    <div class="flex gap-[24px]">
+      <img src="/assets/logo/Logo.svg" alt="Petshop logo">
+      <h1 class="text-[40px] text-[#FDFDFD] font-hero">Petshop</h1>
+    </div>
+    <div>
+      <a href="/auth/login/index.html" class="font-primary text-[#FDFDFD] font-bold text-[24px]">Login</a>
+    </div>
+  </header>
+  <main>
     <div id="app" class="flex flex-col w-full justify-center ">
-      <h1 class="underline text-center font-hero text-[4rem] text-[#1C2541] py-[4rem]">Browse Pets</h1>
+      <h2 class="underline text-center font-hero text-[4rem] text-[#1C2541] py-[4rem]">Browse Pets</h2>
       <div class="postContainer flex flex-row w-full justify-center overflow-hidden flex-wrap gap-x-[1rem] gap-y-[2rem]">
       </div>
     </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  </main>
+  <footer>
+
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
