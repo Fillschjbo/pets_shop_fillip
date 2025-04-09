@@ -13,7 +13,7 @@ async function displayListings(page = 1, sort = "created", sortOrder = "desc"){
 
     postContiner.innerHTML = listings.map((listing) => {
         return`
-            <a class="font-primary text-[#1C2541] hover:cursor-pointer group" href="/listing/">
+            <a class="listing-card font-primary text-[#1C2541] hover:cursor-pointer group" data-id="${listing.id}">
                 <div class="w-[348px] h-[262px] overflow-hidden rounded-[20px]">
                      <img src=${listing.image.url} alt=${listing.image.alt}, class="w-[348px] h-[262px] rounded-[20px] object-cover transition-transform duration-300 group-hover:scale-105">
                 </div>
@@ -39,6 +39,16 @@ async function displayListings(page = 1, sort = "created", sortOrder = "desc"){
             </a>
         `
     }).join("")
+
+    const listingCard = document.querySelectorAll(".listing-card")
+    listingCard.forEach((card) => {
+        const listingId = card.getAttribute("data-id");
+
+        card.addEventListener("click", () => {
+            localStorage.setItem("listingId", listingId);
+            window.location.href = "/listing/";
+        });
+    })
 }
 
 displayListings()
