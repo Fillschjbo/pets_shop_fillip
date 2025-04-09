@@ -13,7 +13,7 @@ async function displayListings(page = 1, sort = "created", sortOrder = "desc"){
 
     postContiner.innerHTML = listings.map((listing) => {
         return`
-            <a class="font-primary text-[#1C2541] hover:cursor-pointer group" href="/listing/index.html">
+            <a class="font-primary text-[#1C2541] hover:cursor-pointer group" href="/listing/">
                 <div class="w-[348px] h-[262px] overflow-hidden rounded-[20px]">
                      <img src=${listing.image.url} alt=${listing.image.alt}, class="w-[348px] h-[262px] rounded-[20px] object-cover transition-transform duration-300 group-hover:scale-105">
                 </div>
