@@ -32,3 +32,18 @@ export async function readPosts(limit = 25, page = 1, sort = null, sortOrder = "
         console.error("Error:", error.message)
     }
 }
+
+export async function readPost(){
+    const id = localStorage.getItem("listingId")
+    if (!id){
+        throw new Error("Could not find id")
+    }
+
+    const response = await fetch(`${API_PET}/${id}`);
+    if (!response) {
+        throw new Error(`error fetching: ${response.status}`)
+    }
+    const data = await response.json();
+    console.log(data)
+    return data;
+}
