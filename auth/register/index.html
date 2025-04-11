@@ -1,10 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
 </head>
 <body>
+    <header class="w-screen h-[80px] bg-[#3A506B] flex justify-between items-center px-[5vw]">
+        <div class="flex gap-[24px]">
+            <img src="/assets/logo/Logo.svg" alt="Petshop logo">
+            <h1 class="text-[40px] text-[#FDFDFD] font-hero">Petshop</h1>
+        </div>
+        <div>
+            <a href="/login/" class="font-primary text-[#FDFDFD] font-bold text-[24px]">Login</a>
+        </div>
+    </header>
 
+    <main class="flex items-center justify-center h-full">
+        <div class="w-[712px] h-[880px] border-1 border-[#CECECE] flex flex-col justify-center items-center border rounded-[25px] mt-[64px]">
+            <h2 class="text-[4rem] font-primary pb-[4rem] font-bold">Register</h2>
+            <form name="register" class="w-[447px] flex flex-col gap-[2rem]">
+                <div>
+                    <label for="name" class="hidden">Name</label>
+                    <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        required
+                        maxlength="20"
+                        pattern="^[\w]+$"
+                        placeholder="Username"
+                        class="border rounded-[15px] h-[50px] w-full pl-1 font-primary font-bold"
+                    />
+                </div>
+
+                <div>
+                    <label for="email" class="hidden">Email</label>
+                    <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        required
+                        pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+                        placeholder="Email"
+                        class="border rounded-[15px] h-[50px] w-full pl-1 font-primary font-bold"
+                    />
+                </div>
+
+                <label for="bio" class="hidden">Name</label>
+                <input
+                    id="bio"
+                    type="text"
+                    name="bio"
+                    maxlength="400"
+                    pattern="^[\w]+$"
+                    placeholder="Bio"
+                    class="border rounded-[15px] h-[50px] w-full pl-1 font-primary font-bold"
+                />
+
+                <div>
+                    <label for="avatar" class="hidden">Password</label>
+                    <input
+                        type="url"
+                        name="avatar"
+                        id="avatar"
+                        required
+                        placeholder="Profile Picture"
+                        class="border rounded-[15px] h-[50px] w-full pl-1 font-primary font-bold"
+                    />
+                </div>
+
+                <div>
+                    <label for="password" class="hidden">Password</label>
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        required
+                        minlength="8"
+                        placeholder="Password"
+                        class="border rounded-[15px] h-[50px] w-full pl-1 font-primary font-bold"
+                    />
+                </div>
+
+                <p class="font-primary font-light text-[#787E8E] text-[12px]">Already have an account? <a href="/auth/login/" class="text-[#3A506B] underline">Login</a></p>
+                <button type="submit" class="w-full h-[50px] bg-[#3A506B] rounded-[20px] font-primary font-medium text-white text-[24px] hover:bg-[#6D85A3]">Register</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="mt-[4rem] bg-[#3A506B] p-[4rem] flex justify-between">
+        <ul class=" flex flex-col text-[#FDFDFD] font-primary text-[1rem] gap-[1rem]">
+            <li>Contact Us</li>
+            <li>About Us</li>
+            <li>&#169; Fillip Schjølberg Husebø 2025</li>
+        </ul>
+        <ul class=" flex flex-col text-[#FDFDFD] font-primary text-[1rem] gap-[1rem]">
+            <li>Legal Policies</li>
+            <li>Terms of Service</li>
+            <li>Pricacy Policy</li>
+        </ul>
+        <ul class=" flex flex-col text-[#FDFDFD] font-primary text-[1rem] gap-[1rem]">
+            <li>Follow us on:</li>
+            <li>Instagram</li>
+            <li>Facebook</li>
+        </ul>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
 </body>
 </html>
