@@ -1,10 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit post</title>
 </head>
 <body>
+    <header class="w-screen h-[80px] bg-[#3A506B] flex justify-between items-center px-[5vw]">
+        <div class="flex gap-[24px]">
+            <img src="/assets/logo/Logo.svg" alt="Petshop logo">
+            <h1 class="text-[40px] text-[#FDFDFD] font-hero">Petshop</h1>
+        </div>
+        <div>
+            <a href="/login/" class="font-primary text-[#FDFDFD] font-bold text-[24px]">Login</a>
+        </div>
+    </header>
 
+    <main class="w-full flex flex-col items-center">
+        <h2 class="font-primary text-[64px] font-bold my-[75px]">Create Post</h2>
+        <form name="editListing" class="w-[66vw]">
+            <div class="flex flex-wrap mb-[4rem]">
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Name" required class="w-[32vw] border rounded-[15px] h-[50px] pl-1 font-primary font-bold mr-[1rem] mb-[1rem]"/>
+
+                <label for="age"></label>
+                <input type="number" id="age" name="age" placeholder="Age" required class="w-[32vw] border rounded-[15px] h-[50px] pl-1 font-primary font-bold"/>
+
+                <label for="location"></label>
+                <input type="text" id="location" name="location" placeholder="Location" required class="w-[32vw] border rounded-[15px] h-[50px] pl-1 font-primary font-bold"/>
+            </div>
+
+            <div class="flex flex-wrap mb-[4rem]">
+                <label for="species"></label>
+                <input type="text" id="species" name="species" placeholder="Species" required class="w-[32vw] border rounded-[15px] h-[50px] pl-1 font-primary font-bold mr-[1rem] mb-[1rem]"/>
+
+                <label for="breed"></label>
+                <input type="text" id="breed" name="breed" placeholder="Breed" required class="w-[32vw] border rounded-[15px] h-[50px] pl-1 font-primary font-bold mb-[1rem]"/>
+
+                <label for="gender"></label>
+                <input type="text" id="gender" name="gender" placeholder="Gender" required class="w-[32vw] border rounded-[15px] h-[50px] pl-1 font-primary font-bold mr-[1rem] mb-[1rem]"/>
+
+                <label for="size"></label>
+                <input type="text" id="size" name="size" placeholder="Size" required class="w-[32vw] border rounded-[15px] h-[50px] pl-1 font-primary font-bold mb-[1rem]"/>
+
+                <label for="color"></label>
+                <input type="text" id="color" name="color" placeholder="Color" required class="w-[32vw] border rounded-[15px] h-[50px] pl-1 font-primary font-bold mr-[1rem]"/>
+            </div>
+
+            <div class="flex flex-col mb-[4rem]">
+                <label for="image"></label>
+                <input type="url" id="image" name="image" placeholder="Enter media URL" class="w-full border rounded-[15px] h-[50px] pl-1 font-primary font-bold mr-[1rem] mb-[1rem]"/>
+
+                <label for="description"></label>
+                <textarea id="description" name="description" placeholder="Description" required class="w-full h-[150px] border rounded-[15px] pl-1 font-primary font-bold mr-[1rem]"></textarea>
+            </div>
+
+            <button type="submit" class="w-full h-[50px] bg-[#3A506B] rounded-[20px] font-primary font-medium text-white text-[24px] hover:bg-[#6D85A3]">Update Listing</button>
+        </form>
+    </main>
+
+    <footer class="mt-[4rem] bg-[#3A506B] p-[4rem] flex justify-between">
+        <ul class=" flex flex-col text-[#FDFDFD] font-primary text-[1rem] gap-[1rem]">
+            <li>Contact Us</li>
+            <li>About Us</li>
+            <li>&#169; Fillip Schjølberg Husebø 2025</li>
+        </ul>
+        <ul class=" flex flex-col text-[#FDFDFD] font-primary text-[1rem] gap-[1rem]">
+            <li>Legal Policies</li>
+            <li>Terms of Service</li>
+            <li>Pricacy Policy</li>
+        </ul>
+        <ul class=" flex flex-col text-[#FDFDFD] font-primary text-[1rem] gap-[1rem]">
+            <li>Follow us on:</li>
+            <li>Instagram</li>
+            <li>Facebook</li>
+        </ul>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
 </body>
 </html>
