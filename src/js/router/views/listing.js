@@ -1,4 +1,5 @@
 import {readPost} from "../../api/listing/read.js";
+import {onDeletePost} from "../../../../ui/listing/delete.js";
 
 const listingContainer = document.querySelector(".listingContainer")
 
