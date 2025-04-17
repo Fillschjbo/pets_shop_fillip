@@ -16,7 +16,7 @@ async function renderListing(){
 
         listingContainer.innerHTML =`
         <div class="lg:pr-[9vw] pt-16 h-screen">
-            <img src=${listing.image.url} alt=${listing.image.alt} class="lg:w-[43vw] lg:h-[554px] object-cover rounded-[20px]">
+            <img src=${listing.image.url} alt=${listing.image.alt || "image"} class="w-[43vw] h-[554px] object-cover rounded-[20px]">
             <p class="font-primary text-[1rem] text-[#1C2541 pt-[32px]">${listing.description}</p>
         </div>
         <div class="pt-16">
