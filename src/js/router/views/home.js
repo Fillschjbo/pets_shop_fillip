@@ -1,4 +1,5 @@
 import {readPosts} from "../../api/listing/read.js";
+import {header} from "../../../../ui/global/header.js";
 
 const postContiner = document.querySelector(".postContainer")
 
@@ -52,3 +53,4 @@ async function displayListings(page = 1, sort = "created", sortOrder = "desc"){
 }
 
 displayListings()
+header()
