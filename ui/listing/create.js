@@ -11,7 +11,7 @@ export async function onCreateListing(event) {
     const breed = form.breed.value;
     const gender = form.gender.value;
     const color = form.color.value;
-    const size = form.gender.value;
+    const size = form.size.value;
     const description = form.body.value;
     const image = form.mediaUrl.value;
 

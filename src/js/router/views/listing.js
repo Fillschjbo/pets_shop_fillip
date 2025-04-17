@@ -18,6 +18,7 @@ async function renderListing(){
         <div class="lg:pr-[9vw] pt-16 h-screen">
             <img src=${listing.image.url} alt=${listing.image.alt || "image"} class="w-[43vw] h-[554px] object-cover rounded-[20px]">
             <p class="font-primary text-[1rem] text-[#1C2541 pt-[32px]">${listing.description}</p>
+            <div id="owner-buttons" class="mt-4"></div>
         </div>
         <div class="pt-16">
             <h2 class="font-primary font-bold lg:text-[4rem]">${listing.name}, ${listing.age}</h2>
@@ -52,6 +53,33 @@ async function renderListing(){
             </div>
         </div>
         `;
+
+        if (localStorage.getItem("user") === listing.owner.name) {
+            const ownerButtonsDiv = document.getElementById("owner-buttons");
+
+            const editPostButton = document.createElement("button");
+            editPostButton.textContent = "Edit post";
+            editPostButton.className = "w-[150px] h-[40px] bg-[#3A506B] hover:bg-[#6D85A3] text-white rounded-[10px] mr-2";
+
+            const deletePostButton = document.createElement("button");
+            deletePostButton.textContent = "Delete post";
+            deletePostButton.className = "w-[150px] h-[40px] bg-[#ff4d4d] hover:bg-[#ff6666] text-white rounded-[10px]";
+
+            editPostButton.addEventListener("click", () => {
+                const updateId = listing.id;
+                localStorage.setItem("listingId", updateId);
+                window.location.href = "/listing/edit/";
+            });
+
+            deletePostButton.addEventListener("click", () => {
+                const updateId = listing.id;
+                localStorage.setItem("listingId", updateId);
+                onDeletePost();
+            });
+
+            ownerButtonsDiv.appendChild(editPostButton);
+            ownerButtonsDiv.appendChild(deletePostButton);
+        }
 
     }catch (error){
         console.error(error)
