@@ -3,16 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/assets/logo/Logo.svg" type="image/x-icon">
   <title>Home</title>
 </head>
 <body>
   <header class="w-screen h-[80px] bg-[#3A506B] flex justify-between items-center px-[5vw]">
-    <div class="flex gap-[24px]">
+    <a href="/" class="flex gap-[24px]">
       <img src="/assets/logo/Logo.svg" alt="Petshop logo">
-      <h1 class="text-[40px] text-[#FDFDFD] font-hero">Petshop</h1>
-    </div>
-    <div class="login-btn flex gap-[16px]">
+      <h1 class="md:text-[40px] text-[32px] text-[#FDFDFD] font-hero">Petshop</h1>
+    </a>
 
+    <div class="login-btn md:flex gap-[16px] hidden">
+
+    </div>
+
+    <div class="relative md:hidden group">
+      <button class="flex items-center px-3 py-1 z-10 font-sans hover:cursor-pointer focus:outline-none">
+        <img src="/assets/icons/Menu.svg" alt="menu">
+      </button>
+
+      <div class="fixed top-[79px] left-0 w-screen rounded-b-lg p-3 shadow-md scale-y-0 group-focus-within:scale-y-100 origin-top duration-200 bg-[#3A506B] text-left z-20">
+        <ul class="menu text-white">
+
+        </ul>
+      </div>
     </div>
   </header>
   <main>

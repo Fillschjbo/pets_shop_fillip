@@ -1,4 +1,5 @@
 import {getDataFromPost, onUpdatePost} from "../../../../ui/listing/edit.js";
+import {header} from "../../../../ui/global/header.js";
 
 getDataFromPost()
 
@@ -10,3 +11,4 @@ if (form) {
 } else {
     console.error("Form not found");
 }
+header()

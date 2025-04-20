@@ -1,5 +1,6 @@
 import {readPost} from "../../api/listing/read.js";
 import {onDeletePost} from "../../../../ui/listing/delete.js";
+import {header} from "../../../../ui/global/header.js";
 
 const listingContainer = document.querySelector(".listingContainer")
 
@@ -87,3 +88,4 @@ async function renderListing(){
     }
 }
 renderListing()
+header()
