@@ -15,7 +15,6 @@ async function displayListings(page = 1, sort = "created", sortOrder = "desc"){
 
     const listings = data.data;
     const { meta } = data;
-    console.log(data)
 
     postContainer.innerHTML = listings.map((listing) => {
         return`

@@ -7,7 +7,6 @@ const listingContainer = document.querySelector(".listingContainer")
 async function renderListing(){
     try{
         const data = await readPost()
-        console.log(data)
 
         if(!data){
             alert("could not fetch data")
