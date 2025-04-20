@@ -1,4 +1,4 @@
-import{r as u}from"./read-77xOQEu6.js";import{h as g}from"./header-gShiXjEk.js";const r=document.querySelector(".postContainer"),a=document.createElement("div");a.className="pagination flex justify-center gap-4 mt-6";r.after(a);async function c(e=1,s="created",n="desc"){const o=await u(25,e,s,n);if(!o){alert("Failed to load posts");return}const l=o.data,{meta:i}=o;r.innerHTML=l.map(t=>`
+import{r as u}from"./read-BZCrnDQD.js";import{h as g}from"./header-vZF85M1c.js";const r=document.querySelector(".postContainer"),a=document.createElement("div");a.className="pagination flex justify-center gap-4 mt-6";r.after(a);async function c(e=1,s="created",n="desc"){const o=await u(25,e,s,n);if(!o){alert("Failed to load posts");return}const l=o.data,{meta:i}=o;r.innerHTML=l.map(t=>`
             <a class="listing-card font-primary text-[#1C2541] hover:cursor-pointer group" data-id="${t.id}">
                 <div class="w-[348px] h-[262px] overflow-hidden rounded-[20px]">
                      <img src=${t.image.url} alt=${t.image.alt}, class="w-[348px] h-[262px] rounded-[20px] object-cover transition-transform duration-300 group-hover:scale-105">
