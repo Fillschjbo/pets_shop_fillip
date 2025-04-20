@@ -1,4 +1,5 @@
 export default async function router(pathname = window.location.pathname) {
+    pathname = pathname.endsWith('/') ? pathname : `${pathname}/`;
     switch (pathname) {
         case "/":
             await import("./views/home.js");
@@ -18,5 +19,7 @@ export default async function router(pathname = window.location.pathname) {
         case "/listing/edit/":
             await import("./views/listingEdit.js");
             break;
+        default:
+            console.error(`No route matched for ${pathname}`);
     }
 }
