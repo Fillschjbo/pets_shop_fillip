@@ -18,8 +18,5 @@ export default async function router(pathname = window.location.pathname) {
         case "/listing/edit/":
             await import("./views/listingEdit.js");
             break;
-
-        default:
-            await import("./views/notFound.js");
     }
 }
