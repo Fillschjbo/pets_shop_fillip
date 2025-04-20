@@ -8,7 +8,6 @@ export async function onRegister(event) {
     let bio = document.getElementById("bio").value;
     let avatar = document.getElementById("avatar").value;
     let password = document.getElementById('password').value;
-    console.log(name, email, password)
 
     try {
         const data = await register({ name, email, bio, avatar, password });

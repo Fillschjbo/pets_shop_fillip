@@ -10,21 +10,21 @@ export function header() {
         const token = localStorage.getItem("token");
         if (token) {
             headerLogin.innerHTML =`
-            <a href="listing/create/" class="font-primary text-[#FDFDFD] font-bold text-[24px]">Post pet</a>
-            <a class="logout font-primary text-[#FDFDFD] font-bold text-[24px]">Logout</a>
+            <a href="/listing/create/" class="font-primary text-[#FDFDFD] font-bold text-[24px]">Post pet</a>
+            <a class="logout font-primary text-[#FDFDFD] font-bold text-[24px] hover:cursor-pointer">Logout</a>
             `;
 
             mobileMenu.innerHTML = `
-            <li><a href="listing/create/" class="font-primary text-[#FDFDFD] font-bold text-[1rem]">Post pet</a></li>
-            <li><a class="logout font-primary text-[#FDFDFD] font-bold text-[1rem]">Logout</a></li>
+            <li><a href="/listing/create/" class="font-primary text-[#FDFDFD] font-bold text-[1rem]">Post pet</a></li>
+            <li><a class="logout font-primary text-[#FDFDFD] font-bold text-[1rem] hover:cursor-pointer">Logout</a></li>
             `;
 
         } else {
             headerLogin.innerHTML = `
-            <a href="auth/login/" class="font-primary text-[#FDFDFD] font-bold text-[24px]">Login</a>
+            <a href="/auth/login/" class="font-primary text-[#FDFDFD] font-bold text-[24px]">Login</a>
         `;
             mobileMenu.innerHTML = `
-            <li><a href="auth/login/" class="font-primary text-[#FDFDFD] font-bold text-[1rem]">Login</a></li>
+            <li><a href="/auth/login/" class="font-primary text-[#FDFDFD] font-bold text-[1rem]">Login</a></li>
             `;
         }
 }

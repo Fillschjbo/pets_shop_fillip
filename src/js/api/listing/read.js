@@ -43,6 +43,5 @@ export async function readPost(){
         throw new Error(`error fetching: ${response.status}`)
     }
     const data = await response.json();
-    console.log(data)
     return data;
 }
