@@ -35,11 +35,11 @@ async function renderListing(){
                         <p class="font-primary text-[1rem] text-[#EBD510] font-bold">Pending</p>
                     </div>`}
                 </li>
-                <li class="font-primary font-bold text-[#787E8E] text-[1rem]">${listing.location}</li>
-                <li class="font-primary font-bold text-[#787E8E] text-[1rem]">${listing.species}</li>
-                <li class="font-primary font-bold text-[#787E8E] text-[1rem]">${listing.breed}</li>
-                <li class="font-primary font-bold text-[#787E8E] text-[1rem]">${listing.gender}</li>
-                <li class="font-primary font-bold text-[#787E8E] text-[1rem]">${listing.size}</li>
+                <li class="font-primary font-bold text-[#787E8E] text-[1rem] flex gap-2"><img src="/assets/icons/Location.svg" alt="location"> ${listing.location}</li>
+                <li class="font-primary font-bold text-[#787E8E] text-[1rem] flex gap-2"><img src="/assets/icons/species.svg" alt="species"> ${listing.species}</li>
+                <li class="font-primary font-bold text-[#787E8E] text-[1rem] flex gap-2"><img src="/assets/icons/Pets.svg" alt="breed"> ${listing.breed}</li>
+                <li class="font-primary font-bold text-[#787E8E] text-[1rem] flex gap-2"><img src="/assets/icons/Gender.svg" alt="gender"> ${listing.gender}</li>
+                <li class="font-primary font-bold text-[#787E8E] text-[1rem] flex gap-2"><img src="/assets/icons/Ruler.svg" alt="ruler"> ${listing.size}</li>
             </ul>
             <button class="w-[350px] h-[51px] bg-[#3A506B] hover:bg-[#6D85A3] text-white rounded-[20px] mt-[200px]">Adopt</button>
             <div class="lg:w-[350px] flex flex-col justify-center items-center shadow-md rounded-[20px] mt-[115px] p-[0.5rem]">
