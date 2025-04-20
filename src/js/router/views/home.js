@@ -1,6 +1,10 @@
 import {readPosts} from "../../api/listing/read.js";
+import {header} from "../../../../ui/global/header.js";
 
-const postContiner = document.querySelector(".postContainer")
+const postContainer = document.querySelector(".postContainer");
+const paginationContainer = document.createElement("div");
+paginationContainer.className = "pagination flex justify-center gap-4 mt-6";
+postContainer.after(paginationContainer);
 
 async function displayListings(page = 1, sort = "created", sortOrder = "desc"){
     const data = await readPosts(25, page, sort, sortOrder);
@@ -9,9 +13,10 @@ async function displayListings(page = 1, sort = "created", sortOrder = "desc"){
         return;
     }
 
-    const listings = data.data
+    const listings = data.data;
+    const { meta } = data;
 
-    postContiner.innerHTML = listings.map((listing) => {
+    postContainer.innerHTML = listings.map((listing) => {
         return`
             <a class="listing-card font-primary text-[#1C2541] hover:cursor-pointer group" data-id="${listing.id}">
                 <div class="w-[348px] h-[262px] overflow-hidden rounded-[20px]">
@@ -49,6 +54,32 @@ async function displayListings(page = 1, sort = "created", sortOrder = "desc"){
             window.location.href = "/listing/";
         });
     })
+
+    paginationContainer.innerHTML = `
+        <button class="prev-page bg-gray-200 px-4 py-2 rounded disabled:opacity-50" ${
+        page === 1 ? "disabled" : ""
+    }>Previous</button>
+            <span class="page-info">Page ${page} of ${meta.pageCount || "1"}</span>
+            <button class="next-page bg-gray-200 px-4 py-2 rounded disabled:opacity-50" ${
+        page >= (meta.pageCount || 1) ? "disabled" : ""
+    }>Next</button>
+    `;
+
+    const prevButton = paginationContainer.querySelector(".prev-page");
+    const nextButton = paginationContainer.querySelector(".next-page");
+
+    prevButton.addEventListener("click", ()=> {
+        if (page > 1) {
+            displayListings(page - 1, sort, sortOrder)
+        }
+    });
+
+    nextButton.addEventListener("click", ()=> {
+        if (page < meta.pageCount || 1) {
+            displayListings(page + 1, sort, sortOrder)
+        }
+    });
 }
 
 displayListings()
+header()

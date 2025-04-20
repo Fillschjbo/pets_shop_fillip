@@ -1,6 +1,5 @@
 import {API_AUTH_REGISTER} from "../constants.js";
 
-
 export async function register({ name, email, bio, avatar, password }) {
     try {
 
@@ -13,7 +12,7 @@ export async function register({ name, email, bio, avatar, password }) {
                 name,
                 email,
                 bio,
-                avatar: avatar.url,
+                avatar: {url: avatar.url},
                 password,
             }),
         });
